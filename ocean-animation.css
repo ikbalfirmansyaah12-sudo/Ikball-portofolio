@@ -1,0 +1,62 @@
+#home .whales {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#home .whale {
+  position: absolute;
+  left: 0;
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1;
+  opacity: 0.78;
+  filter: drop-shadow(0 0 16px #55e4ef66);
+  animation: whale-swim 28s linear infinite;
+}
+
+#home .whale-one {
+  top: 72%;
+}
+
+#home .whale-two {
+  top: 80%;
+  font-size: clamp(30px, 3.2vw, 44px);
+  opacity: 0.62;
+  animation-duration: 36s;
+  animation-delay: -12s;
+}
+
+#home .whale-three {
+  top: 87%;
+  font-size: clamp(34px, 3.6vw, 48px);
+  opacity: 0.7;
+  animation-duration: 32s;
+  animation-delay: -21s;
+}
+
+#home .whale-four {
+  top: 77%;
+  font-size: clamp(26px, 2.8vw, 38px);
+  opacity: 0.5;
+  animation-duration: 40s;
+  animation-delay: -30s;
+}
+
+@keyframes whale-swim {
+  from {
+    transform: translateX(-120px) scaleX(-1);
+  }
+  to {
+    transform: translateX(calc(100vw + 120px)) scaleX(-1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home .whale {
+    left: auto;
+    right: 6%;
+    animation: none;
+  }
+}
