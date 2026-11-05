@@ -26,6 +26,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Verify portfolio files
+        run: |
+          test -f ocean-portfolio/index.html
+          test -f ocean-portfolio/assets/profile.png
+          test -f ocean-portfolio/assets/half-marathon-finish.jpg
+          test -f ocean-portfolio/assets/entertainment-modeling.png
+          test -f ocean-portfolio/assets/casting-modeling.jpg
       - name: Upload portfolio
         uses: actions/upload-pages-artifact@v3
         with:
